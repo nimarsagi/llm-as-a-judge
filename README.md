@@ -18,6 +18,27 @@ The judge isn't built to say no. It changes the decision when the argument earns
 6. You can always overrule it, but only by saying so ("I'm overruling the judge", "I'm doing it anyway"). An order like "just put it in" is more pushback and goes to a new judge. An overrule is written on the changed line of the decision as your call, never as the judge agreeing.
 7. Every push is judged fresh, by a judge that has not seen the earlier ones. The case file is deleted once you've decided.
 
+## When to use this
+
+Use it when you push back on a decision that was already made, whether Claude made it, you made it earlier, or it's written in a file, and you want it changed. It triggers on the first pushback, not only after repeated ones. Typical wording: "I still think we should...", "are you sure?", "just put it in anyway", "but what if we...".
+
+**Example.** The plan says Wednesday is sales outreach. You write: "I want to swap Wednesday for redoing the website." That's pushback on a decision, so Claude doesn't answer the argument itself. It sends your reason, word for word, to a fresh judge, and shows you the judge's answer unchanged:
+
+> **Verdict:** KEEP Wednesday as sales outreach
+> **Why:** No revenue yet, and a website redo takes a full day from the only task that leads straight to sales.
+> **Rule used:** Rule 2: "Website work waits until revenue comes in, unless it is a fix blocking a specific sale."
+> **New fact:** none
+> **What would change my mind:** a specific sale that is blocked by the website
+
+You accept it, or say "I'm overruling the judge".
+
+**Don't use it when:**
+- Nothing has been decided yet. Then Claude just decides.
+- The pushback is a fact Claude can check in a moment ("the file is in `src/`, not `lib/`"). Claude checks it.
+- You're asking a question, not arguing for a change.
+
+Each pushback costs one extra judge run, so it is meant for decisions where giving in would cost you something.
+
 ## Files it keeps in your project
 
 ```
