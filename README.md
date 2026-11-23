@@ -22,15 +22,26 @@ The judge isn't built to say no. It changes the decision when the argument earns
 
 Use it when you push back on a decision that was already made, whether Claude made it, you made it earlier, or it's written in a file, and you want it changed. It triggers on the first pushback, not only after repeated ones. Typical wording: "I still think we should...", "are you sure?", "just put it in anyway", "but what if we...".
 
-**Example.** The plan says Wednesday is sales outreach. You write: "I want to swap Wednesday for redoing the website." That's pushback on a decision, so Claude doesn't answer the argument itself. It sends your reason, word for word, to a fresh judge, and shows you the judge's answer unchanged:
+**Example.** The plan: Monday and Tuesday are sales outreach, Wednesday is follow-up calls. The rules include Rule 3: "Content and lead magnets wait until revenue comes in." One week, message by message:
 
-> **Verdict:** KEEP Wednesday as sales outreach
-> **Why:** No revenue yet, and a website redo takes a full day from the only task that leads straight to sales.
-> **Rule used:** Rule 2: "Website work waits until revenue comes in, unless it is a fix blocking a specific sale."
+| # | You write | Who answers | Why |
+|---|---|---|---|
+| 1 | "Why does content wait until there's revenue?" | Claude | A question. It explains the rule. |
+| 2 | "The call script is in `docs/`, not `scripts/`." | Claude | A fact it can check in a moment. It checks. |
+| 3 | "New idea: a free checklist as a lead magnet." | Claude | Nothing is decided about it yet. It gives a first verdict from the rules: park it. |
+| 4 | "I still think the checklist should replace Tuesday's outreach." | **Judge** | You're arguing against a decision. This is the first pushback, and it already goes to a fresh judge. |
+| 5 | "Just put it in." | **New judge** | An order isn't an overrule. It's more pushback, and it goes to a new judge that never saw #4. |
+| 6 | "I'm overruling the judge." | Claude | Claude changes the plan and writes on Tuesday's line: "checklist, the user's decision against the judge's verdict". |
+
+The judge ran twice, on #4 and #5. This is the answer you'd see after #4, shown unchanged:
+
+> **Verdict:** KEEP Tuesday as sales outreach
+> **Why:** No revenue yet, and the checklist takes a full day from the only task that leads straight to sales.
+> **Rule used:** Rule 3: "Content and lead magnets wait until revenue comes in."
 > **New fact:** none
-> **What would change my mind:** a specific sale that is blocked by the website
-
-You accept it, or say "I'm overruling the judge".
+> **Pros of the change:** could bring in leads later; reusable
+> **Cons of the change:** no sales yet; a full day lost
+> **What would change my mind:** 50+ outreach emails sent with no replies
 
 **Don't use it when:**
 - Nothing has been decided yet. Then Claude just decides.
