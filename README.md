@@ -22,6 +22,8 @@ The judge isn't built to say no. It changes the decision when the argument earns
 
 Use it when you push back on a decision that was already made, whether Claude made it, you made it earlier, or it's written in a file, and you want it changed. It triggers on the first pushback, not only after repeated ones. Typical wording: "I still think we should...", "are you sure?", "just put it in anyway", "but what if we...".
 
+My advice: put it in a workflow, so the skill is triggered when required
+
 **Example.** The plan: Monday and Tuesday are sales outreach, Wednesday is follow-up calls. The rules include Rule 3: "Content and lead magnets wait until revenue comes in." One week, message by message:
 
 | # | You write | Who answers | Why |
