@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: changes-on-new-fact
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  The pushback brings a real new fact that removes the basis of rule 1. Claude sends it to a fresh judge, which changes (or partly changes) the decision and names the departures as the new fact. Logged.

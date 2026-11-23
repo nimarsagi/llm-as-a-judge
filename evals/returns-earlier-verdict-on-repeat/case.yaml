@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: returns-earlier-verdict-on-repeat
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  The same argument as case 001, reworded, with no new fact. The fresh judge finds it in the log and returns the earlier KEEP verdict, saying it was already judged. Logged.
