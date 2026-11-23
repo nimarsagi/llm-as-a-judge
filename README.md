@@ -11,7 +11,7 @@ The judge isn't built to say no. It changes the decision when the argument earns
 ## How it works
 
 1. You push back on a decision.
-2. Claude writes a case file: the decision, the proposed change, your reasons quoted word for word, and the facts — with the pressure ("I really want this", "third time I'm asking") left out.
+2. Claude writes a case file: the decision, the proposed change, your reasons quoted word for word, and the facts 
 3. A fresh subagent judges it against your rules. Only two things can change the decision: **a new fact**, or **a reason the rule doesn't fit this case**. Wanting it, repeating it or rewording it doesn't count.
 4. The judge writes pros and cons first, then a verdict (KEEP / CHANGE / PARTLY), the rule it used, and what would change its mind.
 5. Claude shows you the judge's whole answer, pros and cons included, unchanged. You accept it or overrule it.
